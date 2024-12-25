@@ -4,14 +4,12 @@ import Header from "../components/Header.astro";
 import "@fontsource-variable/onest";
 
 interface Props {
-		title: string;
-		description: string;
-	}
+	title: string;
+	description: string;
+}
 
-const {description, title} = Astro.props
+const { description, title } = Astro.props;
 ---
-
-
 
 <!doctype html>
 <html lang="es">
@@ -43,6 +41,7 @@ const {description, title} = Astro.props
 
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	body {
@@ -50,6 +49,12 @@ const {description, title} = Astro.props
 		color: var(--secondary-color);
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+		min-height: 100vh;
+
 	}
+	
+	@media (prefers-animate: reduce) {
+		scroll-behavior: auto;
+	}
+
 </style>
