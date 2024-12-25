@@ -1,22 +1,30 @@
 ---
 import Badge from "../components/Badge.astro";
+import Socialpill from "../components/Socialpill.astro";
+import Githubicon from "../icons/Githubicon.astro";
+import Linkedinicon from "../icons/Linkedinicon.astro";
+import Gmailicon from "../icons/Gmailicon.astro";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<Layout title="Portfolio's de Goenaga"
+		description="Portfolio de Luis Goenaga, desarrollador fullstack con experiencia en Python, Java, JavaScript, HTML, CSS, React, Node.js y SQL.">
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<div class="flex w-full justify-center my-5">
+				<img
+					src="/src/assets/fotoperfil.svg"
+					alt="foto-perfil"
+					class="rounded-full h-28 py-2"
+				/>
+			</div>
+
 			<h1
 				class="text-white text-4xl font-bold flex justify-center flex-row gap-x-4 pb-10"
 			>
-				<img
-					src="/public/foto-perfil.png"
-					alt="foto-perfil"
-					class="rounded-full w-10 h-10"
-				/>
 				Saludos, soy Luis Goenaga
 				<a
 					href="https://www.linkedin.com/in/luisalbertogoenagapelaez"
@@ -27,14 +35,38 @@ import Layout from "../layouts/Layout.astro";
 					<Badge>Disponible para trabajo</Badge>
 				</a>
 			</h1>
-			<h2>
-				Soy un desarrollador junior fullstack con experiencia en Python, Java,
-				JavaScript, HTML, CSS, React, Node.js y SQL. Estoy apasionado por
-				aprender y crecer en el campo del desarrollo de software, y estoy
-				siempre dispuesto a enfrentar nuevos desafíos.
+			<h2 class="text-2xl text-wrap">
+				<span style="color: var(--accent-color);"
+					>Soy un desarrollador fullstack</span
+				>
+				<span
+					>con experiencia en Python, Java, JavaScript, HTML, CSS, React,
+					Node.js y SQL. Estoy apasionado por aprender y crecer en el campo del
+					desarrollo de software, y estoy siempre dispuesto a enfrentar nuevos
+					desafíos.</span
+				>
 			</h2>
 
-			<ul></ul>
+			<nav class="flex justify-center items-center gap-x-4 my-10">
+				<Socialpill href="https://www.linkedin.com/in/luisalbertogoenagapelaez">
+					<div class="flex justify-center items-center px-3 w-36">
+						<Linkedinicon class="w-6 h-6 mr-2" />
+						Linkedin
+					</div>
+				</Socialpill>
+				<Socialpill href="https://github.com/lgoenaga" class="flex-1">
+					<div class="flex justify-center items-center px-3 w-36">
+						<Githubicon class="w-6 h-6 mr-2" />
+						Github
+					</div>
+				</Socialpill>
+				<Socialpill href="https://github.com/lgoenaga" class="flex-1">
+					<div class="flex justify-center items-center px-3 w-64">
+						<Gmailicon class="w-6 h-6 mr-2" />
+						luisgoenagap@gmail.com
+					</div>
+				</Socialpill>
+			</nav>
 		</section>
-	</main>
-</Layout>
+	</main></Layout
+>
