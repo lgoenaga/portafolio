@@ -8,6 +8,9 @@ import Layout from "../layouts/Layout.astro";
 import Sectioncontainer from "../components/Sectioncontainer.astro";
 import Experience from "../components/Experience.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import Footer from "../components/Footer.astro";
+import Projecticon from "../icons/Projecticon.astro";
+import Projects from "../components/Projects.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,7 +20,7 @@ import Briefcase from "../icons/Briefcase.astro";
 	title="Portfolio's de Goenaga"
 	description="Portfolio de Luis Goenaga, desarrollador fullstack con experiencia en Python, Java, JavaScript, HTML, CSS, React, Node.js y SQL."
 >
-	<main>
+	<main class="px-4">
 		<Sectioncontainer id="inicio" class="py-28 pb-14">
 			<div class="flex w-full justify-center my-5">
 				<img
@@ -65,20 +68,28 @@ import Briefcase from "../icons/Briefcase.astro";
 						Github
 					</div>
 				</Socialpill>
-				<Socialpill href="https://github.com/lgoenaga" class="flex-1">
-					<div class="flex justify-center items-center px-3 w-64">
+				<Socialpill href="mailto: luisgoenagap@gmail.com" class="flex-1">
+					<div class="flex justify-center items-center px-3 w-36">
 						<Gmailicon class="size-6 mr-2" />
-						luisgoenagap@gmail.com
+						Correo
 					</div>
 				</Socialpill>
 			</nav>
 		</Sectioncontainer>
-		<Sectioncontainer id="experiencia"	class="pb-20">
+		<Sectioncontainer id="experiencia" class="pb-20">
 			<h2 class="text-2xl font-bold text-left pb-10 flex gap-x-2 items-center">
 				<Briefcase class="size-6" />
 				Experiencia
 			</h2>
 			<Experience />
 		</Sectioncontainer>
+		<Sectioncontainer id="proyectos" class="pb-20">
+			<h2 class="text-2xl font-bold text-left pb-10 flex gap-x-2 items-center">
+				<Projecticon class="size-6" />
+				Proyectos
+			</h2>
+			<Projects />
+		</Sectioncontainer>
+		<Footer />
 	</main></Layout
 >

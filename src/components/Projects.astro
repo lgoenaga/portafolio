@@ -1,0 +1,53 @@
+---
+const PROJECTS = [
+	{
+		title: "Project 1",
+		description: "This is a description of project 1",
+		link: "https://example.com",
+		gitgub: "#",
+		image: "/src/assets/img/Proyecto1.webp",
+		tags: ["Python", "Django", "React"],
+	},
+	{
+		title: "Project 2",
+		description: "This is a description of project 2",
+		link: "https://example.com",
+		gitgub: "#",
+		image: "project2.jpg",
+		tags: ["Java", "Spring", "React"],
+	},
+	{
+		title: "Project 3",
+		description: "This is a description of project 3",
+		link: "https://example.com",
+		gitgub: "#",
+		image: "project3.jpg",
+		tags: ["React", "Node.js", "PostgreSQL"],
+	},
+];
+---
+
+{
+	PROJECTS.map(({ image, title, description, tags }) => (
+		<article>
+			<h3 
+        class="text-2xl mb-2" 
+        style="color: var(--accent-color)">
+			{title}
+			</h3>
+			<p
+        class="mb-4 font-normal text-pretty"
+        style="color: var(--secondary-color)">
+      {description}
+      </p>
+			<ul>
+				{tags.map((tag) => (
+					<li
+          class="inline-block px-2 py-1 mr-2 text-sm font-medium text-white bg-gray-900 rounded-lg"
+          >{tag}</li>
+				))}
+			</ul>
+			<img class="rounded shadow-2xl shadow-white mt-2 mb-20" src={image} alt={title} />
+		</article>
+	))
+}
