@@ -64,11 +64,17 @@ const { description, title } = Astro.props;
 		}
 	}
 
+	@media (max-width: 1024px) {
+		html {
+			width: 1124px;
+		}
+	}
+
 	@media (max-width: 570px) {
 		html {
 			transform: scale(0.8);
 			transform-origin: top left;
-			width: 540px;
+		
 		}
 		nav {
 			transform: scale(0.8);
@@ -92,6 +98,7 @@ const { description, title } = Astro.props;
 			html {
 				transform: scale(0.8);
 				transform-origin: top left;
+	
 			}
 			nav {
 				transform: scale(0.8);
@@ -110,7 +117,7 @@ const { description, title } = Astro.props;
 			}
 		}
 
-		@media (min-width: 7200px) {
+		@media (min-width: 720px) {
 			html {
 				transform: scale(1);
 				transform-origin: top left;
