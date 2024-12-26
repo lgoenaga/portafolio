@@ -50,11 +50,75 @@ const { description, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-
 	}
-	
+
 	@media (prefers-animate: reduce) {
-		scroll-behavior: auto;
+		html {
+			scroll-behavior: auto;
+		}
 	}
 
+	@media (prefers-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+	@media (max-width: 570px) {
+		html {
+			transform: scale(0.8);
+			transform-origin: top left;
+			width: 540px;
+		}
+		nav {
+			transform: scale(0.8);
+			transform-origin: top center;
+		}
+	}
+
+	@media (max-width: 400px) {
+		html {
+			transform: scale(0.7);
+			transform-origin: top left;
+	
+		}
+		nav {
+			transform: scale(0.7);
+			transform-origin: top center;
+		
+		}
+
+		@media (min-width: 410px) {
+			html {
+				transform: scale(0.8);
+				transform-origin: top left;
+			}
+			nav {
+				transform: scale(0.8);
+				transform-origin: top center;
+			}
+		}
+
+		@media (min-width: 580px) {
+			html {
+				transform: scale(0.9);
+				transform-origin: top left;
+			}
+			nav {
+				transform: scale(0.9);
+				transform-origin: top center;
+			}
+		}
+
+		@media (min-width: 7200px) {
+			html {
+				transform: scale(1);
+				transform-origin: top left;
+			}
+			nav {
+				transform: scale(1);
+				transform-origin: top center;
+			}
+		}
+	}
 </style>
