@@ -86,21 +86,29 @@ const { description, title } = Astro.props;
 
 	@media (max-width: 570px) {
 		html {
-			transform: scale(0.7);
-			transform-origin: top;
 			height: 100vh;
+			overflow-x: hidden;
+		}
+
+		body {
+			overflow-x: hidden;
 		}
 
 		#header {
-			display: inline-block;
+			flex-direction: row;
+			gap: 0.5rem;
 		}
 
 		#header a {
-			font-size: 0.8rem;
+			font-size: 0.7rem;
 		}
 
 		#social {
-			transform: scale(0.6);
+			transform: scale(0.5);
+		}
+
+		#h1index {
+			font-size: larger;
 		}
 	}
 
