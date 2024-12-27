@@ -64,68 +64,47 @@ const { description, title } = Astro.props;
 		}
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 720px) {
 		html {
-			width: 1124px;
+			transform: scale(0.9);
+			transform-origin: top center;
+		}
+	}
+
+	@media (max-width: 600px) {
+		html {
+			transform: scale(0.8);
+			transform-origin: top center;
 		}
 	}
 
 	@media (max-width: 570px) {
 		html {
-			transform: scale(0.8);
-			transform-origin: top left;
-		
-		}
-		nav {
-			transform: scale(0.8);
+			transform: scale(0.);
 			transform-origin: top center;
+		}
+
+		#header {
+			display: inline-block;
+		}
+
+		#header a {
+			padding-right: 0.1rem;
+			padding-left: 0.1rem;
+			font-size: 0.8rem;
+			margin-left: 0rem;
+			margin-right: 0rem;
+		}
+
+		#social {
+			transform: scale(0.8);
 		}
 	}
 
-	@media (max-width: 400px) {
+	@media (min-width: 900px) {
 		html {
-			transform: scale(0.7);
-			transform-origin: top left;
-	
-		}
-		nav {
-			transform: scale(0.7);
+			transform: scale(1);
 			transform-origin: top center;
-		
-		}
-
-		@media (min-width: 410px) {
-			html {
-				transform: scale(0.8);
-				transform-origin: top left;
-	
-			}
-			nav {
-				transform: scale(0.8);
-				transform-origin: top center;
-			}
-		}
-
-		@media (min-width: 580px) {
-			html {
-				transform: scale(0.9);
-				transform-origin: top left;
-			}
-			nav {
-				transform: scale(0.9);
-				transform-origin: top center;
-			}
-		}
-
-		@media (min-width: 720px) {
-			html {
-				transform: scale(1);
-				transform-origin: top left;
-			}
-			nav {
-				transform: scale(1);
-				transform-origin: top center;
-			}
 		}
 	}
 </style>
