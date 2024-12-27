@@ -64,6 +64,16 @@ const { description, title } = Astro.props;
 		}
 	}
 
+		@media (max-width: 1024px) {
+		html {
+			overflow-x: hidden;
+		}
+
+		body {
+			overflow-x: hidden;
+		}
+	}
+	
 	@media (max-width: 720px) {
 		html {
 			transform: scale(0.9);
@@ -121,6 +131,10 @@ const { description, title } = Astro.props;
 			transform: scale(1);
 			transform-origin: top center;
 			font-size: 1rem;
+			overflow-x: hidden;
+		}
+		body {
+			overflow-x: hidden;
 		}
 	}
 </style>
